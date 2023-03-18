@@ -1,0 +1,21 @@
+Java JTextField
+The object of a JTextField class is a text component that allows the editing of a single line text. It inherits JTextComponent class.
+
+JTextField class declaration
+
+Let's see the declaration for javax.swing.JTextField class.
+public class JTextField extends JTextComponent implements SwingConstants
+
+Commonly used Constructors:
+Constructor	            Description
+JTextField()	        Creates a new TextField
+JTextField(String text)	Creates a new TextField initialized with the specified text.
+JTextField(String text, int columns)	Creates a new TextField initialized with the specified text and columns.
+JTextField(int columns)	Creates a new empty TextField with the specified number of columns.
+
+Commonly used Methods:
+Methods	                                    Description
+void addActionListener(ActionListener l)	It is used to add the specified action listener to receive action events from this textfield.
+Action getAction()	                        It returns the currently set Action for this ActionEvent source, or null if no Action is set.
+void setFont(Font f)	                    It is used to set the current font.
+void removeActionListener(ActionListener l)	It is used to remove the specified action listener so that it no longer receives action events from this textfield.

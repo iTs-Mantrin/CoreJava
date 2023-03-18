@@ -18,8 +18,8 @@ class Frame{
         b.setBounds(130,100,100,40);
         f.add(b); //adding button in JFrame
         f.setSize(500,500);
-        f.setVisible(true);
         f.setLayout(null);
+        f.setVisible(true);
 
     }
 }

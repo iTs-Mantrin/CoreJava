@@ -1,2 +1,4 @@
-package JavaExamples;public class TemperatureConverterPractice {
+package JavaExamples;
+
+public class TemperatureConverterPractice {
 }

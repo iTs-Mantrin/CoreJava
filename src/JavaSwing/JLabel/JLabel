@@ -1,0 +1,20 @@
+JLabel class declaration
+
+Let's see the declaration for javax.swing.JLabel class.
+public class JLabel extends JComponent implements SwingConstants, Accessible
+
+Commonly used Constructors:
+Constructor	        Description
+JLabel()	        Creates a JLabel instance with no image and with an empty string for the title.
+JLabel(String s)	Creates a JLabel instance with the specified text.
+JLabel(Icon i)	    Creates a JLabel instance with the specified image.
+JLabel(String s, Icon i, int horizontalAlignment) Creates a JLabel instance with the specified text, image, and horizontal alignment.
+
+Commonly used Methods:
+Methods	                    Description
+String getText()	        it returns the text string that a label displays.
+void setText(String text)	It defines the single line of text this component will display.
+void setHorizontalAlignment(int alignment)	It sets the alignment of the label's contents along the X axis.
+Icon getIcon()	            It returns the graphic image that the label displays.
+int getHorizontalAlignment()It returns the alignment of the label's contents along the X axis.
+

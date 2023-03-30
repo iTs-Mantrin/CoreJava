@@ -1,0 +1,39 @@
+1)Register the Driver Class
+forName() method
+syntax:
+public static void forName(String className) throws ClassNotFoundException
+
+//Register to oracle Driver
+Class.forName("oracle.jdbc.driver.OracleDriver");
+
+2) Create the Connection object
+getConnection() Method
+Syntax:
+1. public static  Connection getConnection(String url) throws SQLException
+2. public static Connection getConnection(String url, String name, String password) throws SQLException
+
+//Establish connection with Oracle database
+Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","password");
+
+3) Create the Statement object
+createStatement() method
+Syntax:
+public Statement createStatement() throws SQLException
+
+Statement stmt = con.createStatement();
+
+4) Execute the query
+executeQuery() method
+Syntax:
+public ResultSet executeQuery(String sql) throws SQLException
+
+ResultSet rs  = stmt.executeQuery("select from emp");
+while(rs.next()){
+System.out.println(rs.getInt(1)+" "+rs.getString(2));
+}
+
+5) close the connection object
+Syntax: close() method
+public void close() throws SQLException
+
+con.close();

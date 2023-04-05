@@ -17,7 +17,30 @@ public class LabelAWT extends Frame implements ActionListener {
     Menu menu;
     Menu subMenu;
     MenuItem menuItem1, menuItem2, menuItem3, menuItem4, menuItem5;
+    PopupMenu popupMenu;
+    MenuItem cut, paste, copy;
+    Frame f;
+    Panel panel;
     LabelAWT(){
+        popupMenu = new PopupMenu("Edit");
+        cut = new MenuItem("Cut");
+        cut.setActionCommand("Cut");
+        copy = new MenuItem("Copy");
+        copy.setActionCommand("Copy");
+        paste = new MenuItem("Paste");
+        paste.setActionCommand("Paste");
+        popupMenu.add(cut);
+        popupMenu.add(paste);
+        popupMenu.add(copy);
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                popupMenu.show(f,e.getX(),e.getY());
+            }
+        });
+
+
+
         scroll = new Scrollbar();
         scroll.setBounds(320,50,25,400);
         add(scroll);
@@ -77,6 +100,14 @@ public class LabelAWT extends Frame implements ActionListener {
         ch.add("Option 5");
         add(ch);
 
+        panel = new Panel();
+        panel.setBounds(100,450,200,200);
+        panel.setBackground(Color.GRAY);
+        Button b1 = new Button("Click me");
+        b1.setBounds(50,100,50,30);
+        panel.add(b1);
+        add(panel);
+
 //        List ls = new List(5);
 //        ls.add("Option 1");
 //        ls.add("Option 2");
@@ -92,7 +123,7 @@ public class LabelAWT extends Frame implements ActionListener {
 
 
         setBackground(Color.LIGHT_GRAY);
-        setSize(400,500);
+        setSize(400,700);
         setLayout(null);
         setVisible(true);
 
